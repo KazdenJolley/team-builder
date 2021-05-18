@@ -1,12 +1,12 @@
 import '../App.css';
 import React from 'react';
 
-function Player(props) {
+function NewTeamember(props) {
     const { details } = props;
     return (
         <div class='container'>
-            <h1>{details.firstName} {details.lastName}</h1>
-            <p>Height: {details.height} inches <br/> Weight: {details.weight} lbs</p>
+            <h1>{details.name}</h1>
+            <p>email: {details.email}<br/> Role: {details.role}</p>
         </div>
     )
 }
@@ -18,7 +18,7 @@ export default function TeamList(props) {
         <div class='container'>
             {
                 list.map((player, idx) => {
-                    return <Player key={idx} details={player} />
+                    return <NewTeamember key={idx} details={player} />
                 })
             }
         </div>
